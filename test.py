@@ -1,21 +1,40 @@
-import pandas
-import numpy
-import matplotlib.pyplot as plt
-import scipy
-import torch
-import pymysql
+# import pandas
+# import numpy
+# import matplotlib.pyplot as plt
+# import scipy
+# import torch
+# import pymysql
+#
+# print('hello world')
+#
+# db = pymysql.connect("localhost","root","wzy12345","Test" )
+#
+# cursor = db.cursor()
+#
+# cursor.execute("SELECT VERSION()")
+#
+# data = cursor.fetchone()
+#
+# print ("Database version : %s " % data)
+#
+# db.close()
 
-print('hello world')
+def extendList(val, list=[]):
+    list.append(val)
+    return list
 
-db = pymysql.connect("localhost","root","wzy12345","Test" )
 
-cursor = db.cursor()
+list1 = extendList(10)
+list2 = extendList(123, [])
+list3 = extendList('a')
 
-cursor.execute("SELECT VERSION()")
+print("list1 = %s" % list1)
+print("list2 = %s" % list2)
+print("list3 = %s" % list3)
 
-data = cursor.fetchone()
 
-print ("Database version : %s " % data)
+def multipliers():
+    return [lambda x: i * x for i in range(4)]
 
-db.close()
 
+print([m(2)for m in multipliers()])
