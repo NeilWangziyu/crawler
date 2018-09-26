@@ -78,11 +78,11 @@ if __name__ == '__main__':
 
     # print(seclecionSort([1,3,4,5,6,7,9]))
 
-    # print(quicksort(my_list))
+    print(quicksort(my_list))
     #
     # print(mergeSort(my_list))
 
-    check_voter('tom')
-    check_voter('tim')
-    check_voter('tom')
+    # check_voter('tom')
+    # check_voter('tim')
+    # check_voter('tom')
 

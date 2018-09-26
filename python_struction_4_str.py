@@ -25,6 +25,7 @@ class SStack():
             raise StackUnderFlow("in SStack pop()")
         return self._elems.pop()
 
+
 # 利用列表写stack
 class LNode:
     def __init__(self, elem, next_=None):

@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     # 遍历
     i = 1
-    for item in list(queens(8)):
+    for item in list(queens(5)):
         print('-----------------')
         print("solution ", i)
         i += 1
