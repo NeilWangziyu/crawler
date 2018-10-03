@@ -1,4 +1,5 @@
 import pymysql
+import pandas as pd
 import datetime
 
 print('Hello World')
@@ -47,6 +48,11 @@ try:
     print("----------------------------------")
 except:
     print("Error: unable to fetch data")
+
+# read data from MySQL
+print(result)
+print(pd.DataFrame(data=list(result), index=None, columns=next(zip(*cursor.description))))
+
 
 # 读取数据库后按照某一列排序
 # try:
