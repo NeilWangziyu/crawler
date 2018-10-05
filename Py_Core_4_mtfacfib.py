@@ -22,13 +22,13 @@ n =12
 def main():
     nfuncs = range(len(funcs))
 
-    print('*** single thread')
+    print('*** single thread -------------')
     for i in nfuncs:
         print('starting ', funcs[i].__name__, 'at: ', ctime())
         print(funcs[i](n))
         print(funcs[i].__name__, ' finished at: ', ctime())
 
-    print('*** multiple thread')
+    print('*** multiple thread -------------')
     threads=[]
     for i in nfuncs:
         t = MyThread(funcs[i], (n,), funcs[i].__name__)
