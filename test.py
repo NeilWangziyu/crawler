@@ -359,13 +359,44 @@ class Solution(object):
 
         final_list = []
 
+    # num_dict = {1:'one', 2:'two',3:'three',4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine'}
+
+
+    def numberToWords(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        thousand = num // 1000
+        thousand_left = num % 1000
+
+        print(thousand)
+        self.number_less_three_digit(thousand_left)
+
+    def number_less_three_digit(self, num):
+        interger_num_dict = {1: 'One', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine',0:'',
+                             10:'Ten', 11:'Eleven', 12:'Twelve', 13:'Thirteen', 14:'Fourteen', 15:'Fifteen', 16:'Sixteen', 17:'Seventeen',
+                             18:'Eighteen', 19:'Ninteen'}
+        decade_num_dict = {2:'Twenty', 3:'Thirty'}
+        number = []
+        hundred = num // 100
+        num = num % 100
+        if num>=20:
+            decade = num // 10
+            integer = num % 10
+            number.append(interger_num_dict[hundred])
+            number.append(interger_num_dict[decade])
+            number.append(interger_num_dict[integer])
+
+        print(number)
+        return number
 
 
 
 
 
 s = Solution()
-
+s.numberToWords(1901)
 # result = s.twoSum([2,7,11,15],26)
 # print(result)
 # result = s.twoSum(nums, 16021)
@@ -381,6 +412,6 @@ s = Solution()
 #
 #
 # print("''")
-s.myAtoi("words and 987")
+# s.myAtoi("words and 987")
 
-print(s.solveNQueens(5))
+# print(s.solveNQueens(5))
