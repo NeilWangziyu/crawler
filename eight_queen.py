@@ -30,17 +30,19 @@ def prettyprint(solution):
 
 
 
-
 if __name__ == "__main__":
     # 不遍历
     prettyprint(random.choice(list(queens(8))))
 
     # 遍历
     i = 1
+    print(list(queens(5)))
+    # queens返回迭代器，list将迭代器的内容转为list
     for item in list(queens(5)):
         print('-----------------')
         print("solution ", i)
         i += 1
+        print(item)
         prettyprint(item)
         print('-----------------')
 
