@@ -33,6 +33,7 @@ def seclecionSort(arr):
         newArr.append(arr.pop(smallest))
     return newArr
 
+
 #快速排序
 def quicksort(array):
     if len(array)<2:
@@ -61,6 +62,8 @@ def mergeSort(arr):
     else:
         result.extend(mergeSort(right))
     return result
+
+
 
 voted = {}
 def check_voter(name):
